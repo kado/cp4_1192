@@ -6,6 +6,7 @@ body {
 }
 h1 {
     color: #E05D5D;
+    text-align: center;
 }
 #formRegistro {
     border-radius: 20px;
@@ -42,7 +43,7 @@ input[type=text],[type=password],[type=email] {
     background-color: #E05D5D;
     color: white;
     font-weight: bold;
-    width: 70%;
+    width: 100%;
     line-height: 30px;
     text-align: center;
     
