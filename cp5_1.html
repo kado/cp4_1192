@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <style type="text/css">
+       @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+       
+       body {
+              background-color: #FFF8E5;
+              font-family: 'Lato';
+       }
+       h1 {
+              color: #E05D5D;
+       }
+       #formRegistro {
+              border-radius: 20px;
+              border-style: dashed;
+              border-color: #E05D5D;
+              border-width: 5px;
+              width: 80%;
+              margin: auto;
+              padding-right: 15px;
+              padding-left: 5px;
+       }
+       label {
+              font-weight: bold;
+       }
+       .declaracion {
+              font-weight: normal;
+       }
+
+       input[type=text],[type=password],[type=email] {
+              border: #E05D5D solid 2px;
+              width: 100%;
+              line-height: 30px;
+              border-radius: 5px;
+              margin-bottom: 10px;
+              padding-left: 5px;
+       }
+
+       .boton {
+              border-radius: 50px;
+              padding-left: 10px;
+              padding-right: 10px;
+              margin: 10px 10px 10px 10px; 
+              border-style: none;
+              background-color: #E05D5D;
+              color: white;
+              font-weight: bold;
+              width: 70%;
+              line-height: 30px;
+              text-align: center;
+              
+       }
+    </style>
+</head>
+<body>
+    
+    <form id="formRegistro" method="GET" action="" >
+        <h1>
+              Registro para Vacunación COVID-19
+        </h1>
+        <br>
+        <label><strong>Nombre</strong></label>
+        <input type="text" 
+               name="nombre" 
+               value="" />
+        <br>
+        <label>Nombre de Usuario</label>
+        <input type="text"
+               name="usuario" 
+               value="" />
+        <br>
+        <label>Sexo</label><br>
+        <input type="radio" 
+               name="sexo" 
+               value="F" />
+        <label class="declaracion">Femenino</label>
+        <br>
+        <input type="radio"
+               name="sexo"
+               value="M" />
+        <label class="declaracion">Masculino</label>
+        <br>
+        <input type="radio"
+               name="sexo"
+               value="O" />
+        <label class="declaracion">Otro</label>
+        <br>
+        <label>Correo electrónico</label>
+        <input type="email" name="email" value="" />
+        <br>
+        <label>Contraseña</label>
+        <input type="password" name="contrasena" value="" />
+        <br>
+        <input type="checkbox" name="declaracion" value="" />
+        <label class="declaracion">
+          Declaro haber leído y aceptar las
+          condiciones generales del programa y la normativa sobre 
+          protección de datos
+        </label>
+        <br>
+        <input class="boton" type="submit" value="Enviar">
+    </form>
+</body>
+</html>

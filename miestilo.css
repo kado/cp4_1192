@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+       
+body {
+    background-color: #FFF8E5;
+    font-family: 'Lato';
+}
+h1 {
+    color: #E05D5D;
+}
+#formRegistro {
+    border-radius: 20px;
+    border-style: dashed;
+    border-color: #E05D5D;
+    border-width: 5px;
+    width: 80%;
+    margin: auto;
+    padding-right: 15px;
+    padding-left: 5px;
+}
+label {
+    font-weight: bold;
+}
+.declaracion {
+    font-weight: normal;
+}
+
+input[type=text],[type=password],[type=email] {
+    border: #E05D5D solid 2px;
+    width: 100%;
+    line-height: 30px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+.boton {
+    border-radius: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px 10px 10px 10px; 
+    border-style: none;
+    background-color: #E05D5D;
+    color: white;
+    font-weight: bold;
+    width: 70%;
+    line-height: 30px;
+    text-align: center;
+    
+}
