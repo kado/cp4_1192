@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Javascript</title>
+    <style>
+        p {
+            color: red;
+        }
+        .parrafo {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img alt="imagen de prueba" src="logo.png">
+    <script type="text/javascript">
+
+        function bienvenida() {
+            document.write("<h1>Mensaje escrito de Javascript</h1>");
+
+            var cadena1 = 'Hola Mundo!';
+            alert(cadena1);
+
+            var nombre = prompt("¿Cómo te llamas?");
+            if (nombre == "") {
+                alert('Hola desconocido.');
+            }else {
+                alert('Hola ' + nombre);
+                for (i=0;i<10;i++) {
+                    document.write("<p class='parrafo'>Hola " + nombre + "</p>");
+                }
+            }
+
+        }
+
+        bienvenida();
+
+    </script>
+</body>
+
+</html>
