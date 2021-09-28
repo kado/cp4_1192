@@ -26,6 +26,24 @@
             var p = document.getElementById("mensaje");
             p.innerText = tipo;
         }
+
+        function despuesde2segundos() {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                console.log('en la tarea...');
+                resolve('resuelto');
+                }, 2000);
+            });
+        }
+        async function asyncCall() {
+            console.log('ejecutando');
+            const result = await despuesde2segundos();
+            console.log(result);
+        }
+        
+        asyncCall();
+
+
     </script>
 </head>
 <body>
