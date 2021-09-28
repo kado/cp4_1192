@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesión 7</title>
+    <script type="text/javascript">
+        function uso_de_location() {
+            var p = document.getElementById('pLocation');
+            p.innerHTML = p.innerHTML + 'location.href: ' + location.href + '<br>';
+            p.innerHTML = p.innerHTML + 'location.host: ' + location.host + '<br>';
+            p.innerHTML = p.innerHTML + 'location.hostname: ' + location.hostname + '<br>';
+            p.innerHTML = p.innerHTML + 'Redirigiendo con location.replace...';
+            
+            //location.replace reemplaza la página actual con la enviada
+            //de parametro en la función. El botón anterior no se afecta.
+            //setTimeout('location.replace("../cp4/cp4.html")',2000);
+            
+            //Con href redirigimos y la pagina anterior es accesible
+            //con el boton atras del navegador.
+            setTimeout('location.href = "../cp4/cp4.html";',5000);
+        }
+
+        function mostrarMensaje(tipo) {
+            var p = document.getElementById("mensaje");
+            p.innerText = tipo;
+        }
+    </script>
+</head>
+<body>
+    <button type="button" 
+            onclick="window.open('../cp4/cp4.html','toolbar=no,menubar=no,status=no,width=800,height=600,resizable=no');">
+        Abrir Ventana Nueva
+    </button>
+    <button type="button"
+        onclick="var resultado = confirm('¿Está seguro de continuar?'); alert(resultado);">
+        Confirmar</button>
+    
+    <button type="button"
+        onclick="setTimeout('window.close()',5000)">
+        setTimeOut
+    </button>
+
+    <button type="button"
+        onclick="uso_de_location()">
+        Probar objeto Location
+    </button>
+    <p id="pLocation"></p>
+
+    <input type="text" placeholder="Nombre" 
+         onfocus="mostrarMensaje('focus');"
+         
+         onchange="mostrarMensaje('change');"
+         onkeyup="mostrarMensaje('keyup');" />
+
+    <input type="text" placeholder="Apellidos" />
+
+    <img src="img/eye.png" alt="Prueba evento mouseover"
+        onmouseover="mostrarMensaje('Puntero sobre la imagen.');"
+        onmouseout="mostrarMensaje('Puntero salió de la imagen');" />
+
+    <p id="mensaje"></p>
+</body>
+</html>
